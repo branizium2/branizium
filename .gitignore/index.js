@@ -1,14 +1,12 @@
 const Discord = require("discord.js")
 const fs = require('fs')
 const client = new Discord.Client()
-const exp = require ('.exp.json')
  
 let prefix = "!"
  
 const warns = JSON.parse(fs.readFileSync('./warns.json'))
  
 client.login(process.env.TOKEN);
-
 
 client.on('guildMemberAdd', member =>{
     let embed = new Discord.RichEmbed()
@@ -58,6 +56,7 @@ client.on('message',message =>{
        message.channel.send("**"+member.user.username + '** a été banni :white_check_mark:')
     }
 });
+
 
 client.on('message', message => {
     if (message.content === '!ip') {
