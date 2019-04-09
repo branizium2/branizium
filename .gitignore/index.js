@@ -8,7 +8,7 @@ const warns = JSON.parse(fs.readFileSync('./warns.json'))
  
 client.login(process.env.TOKEN);
 
-Client.on('message', message => {
+bot.on('message', message => {
     if (message.content === 'ping') {
     message.channel.sendMessage('pong');
   
