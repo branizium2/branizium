@@ -8,6 +8,7 @@ const warns = JSON.parse(fs.readFileSync('./warns.json'))
  
 client.login(process.env.TOKEN);
 
+
 client.on('guildMemberAdd', member =>{
     let embed = new Discord.RichEmbed()
         .setDescription(':tada: **' + member.user.username + '** a rejoint ' + member.guild.name)
@@ -55,6 +56,12 @@ client.on('message',message =>{
        message.guild.ban(member, {days: 7})
        message.channel.send("**"+member.user.username + '** a été banni :white_check_mark:')
     }
+});
+
+client.on('message', message => {
+    if (message.content === 'ping') {
+    message.channel.sendMessage('pong');
+  }
 });
 
 client.on("message", message => {
