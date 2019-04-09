@@ -8,12 +8,6 @@ const warns = JSON.parse(fs.readFileSync('./warns.json'))
  
 client.login(process.env.TOKEN);
 
-bot.on('message', message => {
-    if (message.content === 'ping') {
-    message.channel.sendMessage('pong');
-  
-});
-
 client.on('guildMemberAdd', member =>{
     let embed = new Discord.RichEmbed()
         .setDescription(':tada: **' + member.user.username + '** a rejoint ' + member.guild.name)
