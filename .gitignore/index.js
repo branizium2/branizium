@@ -59,8 +59,8 @@ client.on('message',message =>{
 });
 
 client.on('message', message => {
-    if (message.content === 'ping') {
-    message.channel.sendMessage('pong');
+    if (message.content === '!ip') {
+    message.channel.sendMessage('IP : soon       PORT : soon');
   }
 });
 
