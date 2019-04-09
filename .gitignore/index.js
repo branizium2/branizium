@@ -59,34 +59,6 @@ client.on('message',message =>{
     }
 });
 
-
-/*Systeme experience*/
-let addExp = Math.floor(Math.random() * 3) + 1;
-
-if (!exp[message.author.id]) {
-  exp[message.author.id] = {
-      exp: 0,
-      niveau: 1
-  };
-}
-
-let currentExp = exp[message.author.id].exp
-let currentNiv = exp[message.author.id].niveau
-let nextLevel = currentNiv * 50;
-exp[message.author.id].exp = currentExp + addExp;
-
-if(nextLevel <= currentExp) {
-  exp[message.author.id].niveau += 1; 
-  message.channel
-    .send('Bravo tu es passé niveau ${currentNiv +1}, continue comme ça !')
-    .then(msg => {
-        msg.delete(5000)
-    });
-}
-fs.writeFile('./exp.json', JSON.stringify(exp), err => {
-  if (err) console.log(err);
-});
-
 client.on('message', message => {
     if (message.content === '!ip') {
     message.channel.sendMessage('IP : soon       PORT : soon');
