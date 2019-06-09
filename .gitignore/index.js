@@ -66,7 +66,8 @@ client.on('message', message => {
 
 client.on('message', message => {
     if (message.content === '!staff') {
-    message.channel.sendMessage('FONDATEUR: Buggup FR;Erachk     /     CO-FONDATEUR: AUCUN     /     CHEF-ADMIN: AUCUN     /     SUPER-ADMIN: AUCUN     /     ADMINISTRATEUR: aucun    /     SUPER-MODO: AUCUN     /     MODERATEUR: agent vegeto     /     HELPEUR: AUCUN     /     STAFF-TEST: AUCUN     /');
+    message.channel.sendMessage('FONDATEUR: Buggup FR;Erachk    
+                                - /     CO-FONDATEUR: AUCUN     /     CHEF-ADMIN: AUCUN     /     SUPER-ADMIN: AUCUN     /     ADMINISTRATEUR: aucun    /     SUPER-MODO: AUCUN     /     MODERATEUR: agent vegeto     /     HELPEUR: AUCUN     /     STAFF-TEST: AUCUN     /');
   }
 });
 
