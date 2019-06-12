@@ -57,20 +57,11 @@ client.on('message',message =>{
     }
 });
 
-
 client.on('message', message => {
     if (message.content === '!ip') {
     message.channel.sendMessage('IP : play.braniziumpvp.fr ');
   }
 });
-
-
-client.on('message', message => {
-    if (message.content === '!site') {
-    message.channel.sendMessage('Site : http://braniziumpvp.fr/ ');
-  }
-});
-
 
 client.on("message", message => {
     if (!message.guild) return
