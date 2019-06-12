@@ -63,6 +63,12 @@ client.on('message', message => {
   }
 });
 
+client.on('message', message => {
+    if (message.content === '!site') {
+    message.channel.sendMessage('Site : http://braniziumpvp.fr/ ');
+  }
+});
+
 client.on("message", message => {
     if (!message.guild) return
     let args = message.content.trim().split(/ +/g)
